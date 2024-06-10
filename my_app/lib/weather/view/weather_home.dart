@@ -71,9 +71,11 @@ class _WeatherHomeState extends State<WeatherHome> {
                         onRefresh: _refreshWeather,
                       ),
                     ),
-                    const Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 16.0),
-                      child: HourlyWeatherWidget(),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                      child: HourlyWeatherWidget(
+                        weather: state.weather,
+                      ),
                     ),
                     const Text("Widget heure par heure"),
                     const Text("Widget prévision de la semaine"),
